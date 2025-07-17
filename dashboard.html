@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Maze - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <div class="stars-bg"></div>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="user-avatar">
+                <div class="avatar-ring"></div>
+                <span id="userInitial">V</span>
+            </div>
+            <div class="user-info">
+                <h3 id="username">Player</h3>
+                <p class="user-title">Echo Navigator</p>
+            </div>
+        </div>
+        
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="totalStars">0</span>
+                    <span class="stat-label">Stars Collected</span>
+                </div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="levelsCompleted">0</span>
+                    <span class="stat-label">Levels Complete</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar-actions">
+            <button class="btn-secondary" id="settingsBtn">Settings</button>
+            <button class="btn-secondary" id="howToPlayBtn">How to Play</button>
+            <button class="btn-danger" id="logoutBtn">Logout</button>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="dashboard-header">
+            <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+            <h1>Echo Maze</h1>
+            <h2>Level Selection</h2>
+        </div>
+        
+        <div class="level-grid-container">
+            <div class="level-grid" id="levelGrid"></div>
+            
+            <div class="pagination">
+                <button class="btn-secondary" id="prevPage" disabled>← Previous</button>
+                <span class="page-info">Page <span id="currentPage">1</span> of <span id="totalPages">3</span></span>
+                <button class="btn-secondary" id="nextPage">Next →</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="modal-close" id="closeSettings">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label>Color Theme</label>
+                    <select id="colorTheme" class="select-input">
+                        <option value="neon">Neon Cyberpunk</option>
+                        <option value="classic">Classic Blue</option>
+                        <option value="forest">Forest Green</option>
+                    </select>
+                </div>
+                <button class="btn-danger" id="resetProgress">Reset All Progress</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="howToPlayModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>How to Play</h2>
+                <button class="modal-close" id="closeHowToPlay">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="tutorial-section">
+                    <h3>Objective</h3>
+                    <p>Navigate through dark mazes to collect stars and reach the exit. Use echo pulses to reveal your surroundings.</p>
+                </div>
+                <div class="tutorial-section">
+                    <h3>Controls</h3>
+                    <ul>
+                        <li><strong>WASD / Arrow Keys:</strong> Move your character</li>
+                        <li><strong>Spacebar:</strong> Send echo pulse</li>
+                        <li><strong>ESC:</strong> Pause game</li>
+                    </ul>
+                </div>
+                <div class="tutorial-section">
+                    <h3>Echo Mechanics</h3>
+                    <p>Your vision is limited! Send echo pulses to temporarily reveal maze walls and paths within 15 blocks.</p>
+                </div>
+                <div class="tutorial-section">
+                    <h3>Scoring</h3>
+                    <ul>
+                        <li>Complete level: 1 star</li>
+                        <li>Collect all items: 2 stars</li>
+                        <li>Save echo uses: 3 stars</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/levels.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

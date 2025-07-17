@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Maze - Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="game-page">
+    <div class="game-container">
+        <div class="game-hud">
+            <div class="hud-left">
+                <div class="level-info">
+                    <span class="level-number">Level <span id="currentLevel">1</span></span>
+                    <span class="level-title" id="levelTitle">Easy 1</span>
+                </div>
+            </div>
+            
+            <div class="hud-center">
+                <div class="stars-collected">
+                    <span id="starsCollected">0</span> / <span id="totalStars">3</span>
+                </div>
+            </div>
+            
+            <div class="hud-right">
+                <div class="echo-uses">
+                    <button id="echoPulseBtn" class="echo-btn">
+                        <div class="pulse-wave"></div>
+                        <span>ECHO</span>
+                    </button>
+                    <div class="uses-display">
+                        <span id="echoUsesLeft">3</span>/3 Uses
+                    </div>
+                </div>
+                <button class="btn-secondary" id="pauseBtn">Pause</button>
+            </div>
+        </div>
+        
+        <div class="game-viewport">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+        </div>
+        
+        <div class="mobile-controls" id="mobileControls">
+            <div class="dpad">
+                <button class="dpad-btn" data-direction="up">↑</button>
+                <button class="dpad-btn" data-direction="left">←</button>
+                <button class="dpad-btn" data-direction="down">↓</button>
+                <button class="dpad-btn" data-direction="right">→</button>
+            </div>
+            <div class="mobile-echo-container">
+                <button class="mobile-echo-btn" id="mobileEchoBtn">ECHO</button>
+                <div class="mobile-uses-display">
+                    <span id="mobileEchoUsesLeft">3</span>/3
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="pauseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Game Paused</h2>
+            </div>
+            <div class="modal-body">
+                <button class="btn-primary" id="resumeBtn">Resume Game</button>
+                <button class="btn-secondary" id="restartLevelBtn">Restart Level</button>
+                <button class="btn-secondary" id="backToDashboardBtn">Back to Dashboard</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="levelCompleteModal">
+        <div class="modal-content level-complete">
+            <div class="modal-header">
+                <h2>Level Complete!</h2>
+            </div>
+            <div class="modal-body">
+                <div class="completion-stats">
+                    <div class="stat-row">
+                        <span>Stars Earned:</span>
+                        <span id="completionStars">3/3</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Time:</span>
+                        <span id="completionTime">2:34</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Echo Pulses Used:</span>
+                        <span id="completionPulses">2</span>
+                    </div>
+                </div>
+                
+                <div class="story-snippet" id="storySnippet"></div>
+                
+                <div class="completion-actions">
+                    <button class="btn-primary" id="nextLevelBtn">Next Level</button>
+                    <button class="btn-secondary" id="replayLevelBtn">Replay Level</button>
+                    <button class="btn-secondary" id="backToDashboard2Btn">Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/levels.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
