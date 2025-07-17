@@ -1,48 +1,5 @@
-# Echo Maze
+Echo Maze is a maze game where you can't see the whole maze but only you surroundings. You have to try to solve the maze and try to get all the stars using your memory and intuition. However, to help you out, there is an echo button that reveals the map for a brief moment that you can use to solve it. The maze has 20 levels and all account data is saved locally. The game comes with a how to play section as well.
 
-A challenging 2D maze navigation game where players use limited echo pulses to reveal their surroundings and find their way through increasingly difficult mazes.
+Just to clarify about ai use, I am failry new to css and js so I have used ai to learn how to do specific things in my project like level generation and more. I have used ai asa tool to guide me through this project with logic and more. However, all the code in this project is handwritten by me. And, in the end, I have used ai to organize my code in an order and foramt that is easier to read since I am a pretty messy and unorganized coder. All it did was rearange code that I already wrote in a more accessible and more efficient format and more readable format. All the code was written by me though.
 
-## Game Overview
-
-Echo Maze is a strategic puzzle game that tests your spatial awareness and resource management skills. Navigate through dark mazes using only limited vision and strategic echo pulses to reveal the path ahead.
-
-## How to Play
-
-- **Movement**: Use WASD or arrow keys to move one grid square at a time
-- **Echo Pulse**: Press spacebar to send out an echo that reveals all paths within 15 blocks
-- **Objective**: Collect stars and reach the exit to complete each level
-- **Footprints**: Your last 10 steps are visible as fading footprints to help track your path
-
-## Game Features
-
-- **20 Unique Levels**: Progressive difficulty from Easy to Expert
-- **Limited Echo System**: Only 3 echo pulses per level - use them wisely
-- **Star Rating System**: Earn up to 3 stars per level based on performance
-- **Footprint Trail**: Visual feedback showing your recent movement history
-- **Responsive Design**: Works on desktop and mobile devices
-
-## Scoring System
-
-- **1 Star**: Complete the level
-- **2 Stars**: Collect all items in the level
-- **3 Stars**: Complete the level with echo uses remaining
-
-## Technical Details
-
-Built with vanilla HTML5, CSS3, and JavaScript. Uses HTML5 Canvas for game rendering and localStorage for progress saving.
-
-## Installation
-
-1. Clone or download the repository
-2. Open `index.html` in a web browser
-3. Enter any username to start playing
-4. No additional setup required
-
-## Difficulty Progression
-
-- **Easy (Levels 1-5)**: Small mazes, fewer obstacles
-- **Medium (Levels 6-10)**: Larger mazes, more complex paths
-- **Hard (Levels 11-15)**: Complex layouts, more stars to collect
-- **Expert (Levels 16-20)**: Maximum difficulty, largest mazes
-
-Perfect for hackathons, game jams, or anyone who enjoys strategic puzzle games!
+I hope you guys enjoy the game, let me know about anything I can do to fix it.
